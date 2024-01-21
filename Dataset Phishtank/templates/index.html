@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Input Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0062cc;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Input Form</h1>
+      <form method="post">
+        <label for="input_data">Input Data:</label>
+        <input type="text" name="input_data" id="input_data">
+        <button type="submit">Submit</button>
+      </form>
+
+      {% if output_data %}
+      <h2>Output Data:</h2>
+      <p>{{ output_data }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
